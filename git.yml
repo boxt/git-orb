@@ -2,14 +2,20 @@ version: 2.1
 
 description: Read and write the repository directory to cache
 
+display:
+  home_url: "https://github.com/boxt/orbs"
+  source_url: "https://github.com/boxt/git-orb"
+
 commands:
   cache-read:
+    description: "Load the application repo from the cache"
     steps:
       - restore_cache:
           keys:
             - git-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
 
   cache-write:
+    description: "Write the application repo at :path to the cache"
     parameters:
       path:
         description: Base path for the app directory
