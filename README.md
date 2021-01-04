@@ -10,7 +10,7 @@ You can see how this works in ./github/workflows/update-readme-workflow.yml
 
 ``` yml
 orbs:
-  rubocop: boxt/rubocop@0.2.2
+  git: boxt/git@0.2.3
 
 ```
 
@@ -22,3 +22,4 @@ Read about the available commands and how to use them here:
 https://circleci.com/developer/orbs/orb/boxt/git
 
 Part of [boxt/orbs](https://github.com/boxt/orbs)
+t/orbs)
