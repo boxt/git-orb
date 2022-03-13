@@ -4,7 +4,7 @@ description: Read and write the repository directory to cache
 
 display:
   home_url: "https://github.com/boxt/orbs"
-  source_url: "https://github.com/boxt/git-orb/blob/master/config.yml"
+  source_url: "https://github.com/boxt/git-orb/blob/main/config.yml"
 
 commands:
   cache-read:
