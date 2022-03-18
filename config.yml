@@ -12,8 +12,8 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - git-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
-
+            - git-cache-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          name: "Restore Git cache"
   cache-write:
     description: "Write the application repo at :path to the cache"
     parameters:
@@ -21,9 +21,9 @@ commands:
         description: Base path for the app directory
         type: string
         default: ~/app
-
     steps:
       - save_cache:
-          key: git-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          key: git-cache-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          name: "Save Git cache"
           paths:
             - << parameters.path >>
