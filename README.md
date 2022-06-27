@@ -10,7 +10,7 @@ You can see how this works in ./github/workflows/update-readme-workflow.yml
 
 ``` yml
 orbs:
-  git: boxt/git@0.2.3
+  git: boxt/git@0.2.4
 
 ```
 
